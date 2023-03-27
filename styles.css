@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    max-width: 1280px;
+    margin: 0;
+    background-color: black;
+}
+
+
+
+
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+
+.navbar {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #1F1F1F;
+    align-items: center;
+}
+
+ul {
+    padding-right: 20px;
+}
+
+li {
+    color: white;
+    display: inline-block;
+    margin: 20px;
+}
+
+
+.intro-img img {
+    width: 100%;
+    height: auto;
+
+}
+
