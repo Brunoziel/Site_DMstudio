@@ -1,16 +1,21 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+/* -Fonts- */
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Fredoka';
+
 }
+
 body {
-    max-width: 1280px;
+    
     margin: 0;
     background-color: black;
 }
-
-
-
 
 .logo img{
     width: 100px;
@@ -22,30 +27,84 @@ body {
 }
 
 
-.navbar {
+header {
     display: flex;
-    position: fixed;
     flex-direction: row;
+    position: fixed;
     justify-content: space-between;
     width: 100%;
     background-color: #1F1F1F;
     align-items: center;
+    top: 0;
+    left: 0;
+    padding: 20px 120px;
+    z-index: 100;
 }
 
 ul {
     padding-right: 20px;
 }
 
-li {
-    color: white;
+nav a {
+    font-family: 'Fredoka';
     display: inline-block;
     margin: 20px;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
 }
 
+nav a:hover,
+nav a.active {
+    color: #0ef;
+}
 
-.intro-img img {
-    width: 100%;
-    height: auto;
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.intro-title {
+    margin-left: 50vw;
+    font-size: 100px;
+    font-family: 'Fredoka';
+    color: white;
 
 }
 
+.intro-subtitle {
+    font-family: 'Fredoka';
+    color: white;
+}
+
+#intro {
+    background-image: url(/assets/salon.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    
+}
+
+#about {
+    background-image: url(/assets/tools.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#services {
+    background-image: url(/assets/haircut.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#units {
+    background-image: url(/assets/scissors.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#contact {
+    background-image: url(/assets/working.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
