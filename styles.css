@@ -18,12 +18,12 @@ body {
 }
 
 .logo img{
-    width: 100px;
-    height: 100px;
+    max-width: 75px;
+    max-height: auto;
 }
 
 .logo {
-    margin-left: 30px;
+    margin-left: 3vw;
 }
 
 
@@ -37,8 +37,7 @@ header {
     align-items: center;
     top: 0;
     left: 0;
-    padding: 20px 120px;
-    z-index: 100;
+    padding: 0px 50px;
 }
 
 ul {
@@ -66,7 +65,6 @@ section {
 }
 
 .intro-title {
-    margin-left: 50vw;
     font-size: 100px;
     font-family: 'Fredoka';
     color: white;
@@ -79,32 +77,39 @@ section {
 }
 
 #intro {
-    background-image: url(/assets/salon.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0)), url(/assets/salon.jpg);
     background-repeat: no-repeat;
-    background-size: 100vw;
+    background-size: cover;
+    background-position: center;
     
 }
 
 #about {
-    background-image: url(/assets/tools.jpg);
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),url(/assets/tools.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+
 }
 
 #services {
     background-image: url(/assets/haircut.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 #units {
     background-image: url(/assets/scissors.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+
 }
 
 #contact {
     background-image: url(/assets/working.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
 }
