@@ -4,7 +4,7 @@
 
 
 * {
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Fredoka';
@@ -26,6 +26,12 @@ body {
     margin-left: 3vw;
 }
 
+p {
+    font-size: 100px;
+    font-family: 'Fredoka';
+    color: white;
+    font-size: medium;
+}
 
 header {
     display: flex;
@@ -58,12 +64,6 @@ nav a.active {
     color: #0ef;
 }
 
-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
 .intro-title {
     font-size: 100px;
     font-family: 'Fredoka';
@@ -76,6 +76,15 @@ section {
     color: white;
 }
 
+/*Sections */
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/*Intro */
 #intro {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0)), url(/assets/salon.jpg);
     background-repeat: no-repeat;
@@ -83,6 +92,14 @@ section {
     background-position: center;
     
 }
+
+.intro-container {
+}
+
+
+
+/*Intro END */
+
 
 #about {
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),url(/assets/tools.jpg);
@@ -92,6 +109,10 @@ section {
 
 }
 
+.about-container {
+    margin: auto;
+}
+
 #services {
     background-image: url(/assets/haircut.jpg);
     background-repeat: no-repeat;
@@ -99,7 +120,7 @@ section {
     background-position: center;
 }
 
-#units {
+#media {
     background-image: url(/assets/scissors.jpg);
     background-repeat: no-repeat;
     background-size: cover;
