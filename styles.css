@@ -6,32 +6,26 @@
 * {
     margin: auto;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Fredoka';
+    -webkit-text-fill-color: white;
 
 }
 
 body {
-    
-    margin: 0;
-    background-color: black;
+     background-color: black;
 }
 
 .logo img{
-    max-width: 75px;
+    max-width: 70px;
     max-height: auto;
+    border-radius: 50px;
 }
 
 .logo {
     margin-left: 3vw;
 }
 
-p {
-    font-size: 100px;
-    font-family: 'Fredoka';
-    color: white;
-    font-size: medium;
-}
+
 
 header {
     display: flex;
@@ -43,7 +37,7 @@ header {
     align-items: center;
     top: 0;
     left: 0;
-    padding: 0px 50px;
+    padding: 5px 50px;
 }
 
 ul {
@@ -64,17 +58,7 @@ nav a.active {
     color: #0ef;
 }
 
-.intro-title {
-    font-size: 100px;
-    font-family: 'Fredoka';
-    color: white;
 
-}
-
-.intro-subtitle {
-    font-family: 'Fredoka';
-    color: white;
-}
 
 /*Sections */
 
@@ -90,13 +74,31 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
 }
 
-.intro-container {
+.intro_container {
+    display: flex;
+    text-align: left;
+    margin: auto 10vw;
 }
 
+.img_intro {
+    width: 40%;
+    border-radius: 100px;
+}
 
+.intro-title {
+    font-size: 400%;
+    font-family: 'Fredoka';
+    color: white;
+
+}
+
+.intro-subtitle {
+    font-size: 150%;
+    font-family: 'Fredoka';
+    color: white;
+}
 
 /*Intro END */
 
@@ -109,9 +111,26 @@ section {
 
 }
 
-.about-container {
-    margin: auto;
+.about_container {
+    display: flex;
+    margin: auto 10vw;
+    gap: 30px;
+    font-size: 120%;
+    text-align: left;
+    
 }
+
+.img_sobre {
+    width: 40%;
+    border-radius: 2px;
+}
+
+@media only screen and (max-width: 450px) {
+    img {
+      width: 100%;
+    }
+  }
+
 
 #services {
     background-image: url(/assets/haircut.jpg);
