@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 /* -Fonts- */
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10px;
+}
 
 * {
     margin: auto;
@@ -25,8 +29,6 @@ body {
     margin-left: 3vw;
 }
 
-
-
 header {
     display: flex;
     flex-direction: row;
@@ -37,7 +39,7 @@ header {
     align-items: center;
     top: 0;
     left: 0;
-    padding: 5px 50px;
+    padding: 10px 10px;
 }
 
 ul {
@@ -45,10 +47,8 @@ ul {
 }
 
 nav a {
-    font-family: 'Fredoka';
     display: inline-block;
     margin: 20px;
-    color: white;
     text-decoration: none;
     transition: .3s;
 }
@@ -114,22 +114,29 @@ section {
 .about_container {
     display: flex;
     margin: auto 10vw;
-    gap: 30px;
+    column-gap: 30px;
     font-size: 120%;
     text-align: left;
-    
 }
 
-.img_sobre {
-    width: 40%;
+
+.about_img {
+    width: 50%;
     border-radius: 2px;
 }
 
-@media only screen and (max-width: 450px) {
-    img {
-      width: 100%;
+@media only screen and (max-width: 800px) {
+    .about_container {
+        font-size: clamp(1em, 1em + 1vw, 1.5em);
+        display: inline-block;
+    }
+    .about_img{
+        width: clamp(10em, 13em + 13vw, 20em);
+        display: block;
     }
   }
+
+
 
 
 #services {
