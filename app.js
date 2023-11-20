@@ -1,4 +1,5 @@
 const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
+const checkbox = document.getElementById("check");
 
 function getDistanceFromTheTop(element) {
     const id = element.getAttribute("href");
@@ -16,6 +17,7 @@ function scrollToSection(event) {
     event.preventDefault();
     const distanceFromTheTop = getDistanceFromTheTop(event.target) - 50;
     nativeScroll(distanceFromTheTop)
+    checkbox.checked = false
 }
 
 menuLinks.forEach((link) => {
