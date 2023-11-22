@@ -15,10 +15,10 @@ html {
 }
 
 body {
-     background-color: black;
+    background-color: black;
 }
 
-.logo img{
+.logo img {
     max-width: 60px;
     max-height: auto;
     border-radius: 50px;
@@ -27,7 +27,7 @@ body {
 .logo {
     margin-left: 6vw;
     justify-content: center;
-    height: fit-content;   
+    height: fit-content;
 }
 
 header {
@@ -46,7 +46,7 @@ header {
     margin: 0;
 }
 
-.checkbtn{
+.checkbtn {
     font-size: 30px;
     color: white;
     float: right;
@@ -69,6 +69,7 @@ nav ul {
 nav ul li {
     display: inline-block;
 }
+
 nav ul li a {
     display: inline-block;
     margin: 20px;
@@ -81,14 +82,15 @@ nav ul li a {
 nav ul li a:hover,
 a:active {
     color: aqua;
-    
+
 }
 
 @media only screen and (max-width: 620px) {
-    .checkbtn{
+    .checkbtn {
         display: block;
     }
-    ul {
+
+    nav ul {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -98,7 +100,8 @@ a:active {
         text-align: center;
         padding-top: 20px;
     }
-    nav ul li{
+
+    nav ul li {
         appearance: button;
         display: block;
         margin: 20px;
@@ -108,11 +111,11 @@ a:active {
         font-size: 25px;
     }
 
-    #check:checked ~ ul{
+    #check:checked~ul {
         left: 0;
     }
 
-    #btn:active ~ ul{
+    #btn:active~ul {
         left: -100%;
     }
 }
@@ -157,11 +160,10 @@ section {
     color: white;
 }
 
-/*Intro END */
-
+/*About*/
 
 #about {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),url(/assets/tools.jpg);
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)), url(/assets/tools.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -182,30 +184,168 @@ section {
     border-radius: 2px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     .about_container {
         font-size: clamp(1em, 1em + 1vw, 1.5em);
         display: inline-block;
     }
+
     .about_container p {
         margin-bottom: 2vh;
     }
-    .about_img{
+
+    .about_img {
         width: clamp(10em, 13em + 13vw, 20em);
         display: block;
         margin-bottom: 2vh;
     }
-  }
+}
 
-
-
+/*Services*/
 
 #services {
     background-image: url(/assets/haircut.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    padding: 30px 10px;
+    transition: background 0.4s ease-in;
 }
+
+/*.services_container {
+    font-size: 1.8em;
+    align-items: center;
+    margin-top: 0;
+
+}*/
+/*.services_title {
+    color: white;
+    text-align: center;
+    margin: 30px auto 30px;
+}*/
+/*.services_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    padding: 30px 10px;
+    background: #000000;
+    transition: background 0.4s ease-in;
+}*/
+/*@media only screen and (max-width: 768px) {
+    .about_container {
+
+        align-items: center;
+        justify-items: center;
+    }
+
+    .services_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: center;
+        padding: 30px 10px;
+        background: #000000;
+    }
+
+    .services_list {
+        margin-bottom: 5%;
+        line-height: 1.5em;
+        width: clamp(9em, 10em + 10vw, 14em);
+
+    }
+
+    .services_img {
+        width: clamp(9em, 11em + 11vw, 14em);
+        display: block;
+        margin-bottom: 2vh;
+        margin-bottom: 5%;
+    }
+}
+*/
+
+input[type=radio] {
+    display: none;
+}
+
+.card_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+
+.card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.slide_container {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+#item-1:checked ~ .cards #song-3,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2 {
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1 {
+    transform: translateX(50%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3 {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+/*Media*/
 
 #media {
     background-image: url(/assets/scissors.jpg);
